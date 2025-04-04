@@ -6,10 +6,12 @@ ComfyUIで日本語でタグ入力出来るようにするオートコンプリ�
 
 [a1111-sd-webui-tagcomplete](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete)の[danbooru.csv](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete/blob/main/tags/danbooru.csv)をベースに、
 1. [booru-japanese-tag](https://github.com/boorutan/booru-japanese-tag)の手動翻訳辞書[danbooru-jp.csv](https://github.com/boorutan/booru-japanese-tag/blob/main/danbooru-jp.csv)
-2. [DanbooruAPI](https://danbooru.donmai.us/wiki_pages/help:api)で取得した[Wikiに掲載されているAnotherNames](https://danbooru.donmai.us/wiki_pages/api%3Awiki_pages)
+2. [DanbooruAPI](https://danbooru.donmai.us/wiki_pages/help:api)で取得した[Wikiに掲載されているAnotherNames](https://danbooru.donmai.us/wiki_pages/api%3Awiki_pages)の内、ひらがな・カタカナ・CJK統合漢字が含まれている物
 3. [booru-japanese-tag](https://github.com/boorutan/booru-japanese-tag)の機械翻訳辞書[danbooru-only-machine-jp.csv](https://github.com/boorutan/booru-japanese-tag/blob/main/danbooru-only-machine-jp.csv)
 
-の優先度でマージした物です。
+の優先度でマージした物です。  
+CJK統合漢字が含まれている物を機械的に抽出したため、一部中国語のタグが含まれています。  
+また、コメントアウトの利便性の観点から`#`を含むタグを除外しています。
 
 ## 使い方
 1. ComfyUIに[ComfyUI-Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts)をインストールする
